@@ -288,47 +288,59 @@ p {
 }
 
 /* Skills Section */
+.skills {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.skills h2 {
+  font-size: 2.5em;
+  margin-bottom: 2em;
+  color: var(--clr-yellow);
+}
+
+/* Flex container para las skills */
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+/* Cada categoría (Backend, Frontend, etc.) */
 .skill {
-    background: var(--color-primary-light);
-    color: var(--color-white);
-    border-radius: 8px;
-    padding: 1.2em 3em;
-    margin: 1.5em auto; 
-    cursor: pointer;
-    user-select: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-align: center;
-    box-shadow: 0 4px 10px var(--color-shadow);
-    transition: background 0.3s ease;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  padding: 1em 5em;
+  border-radius: 0.5em;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+  position: relative;
+  object-fit:cover;
 }
 
 .skill:hover {
-    background: var(--color-primary);
+  transform: scale(1.05);
 }
 
+/* Contenedor de íconos */
 .items {
-    display: none;
-    margin-top: 1em;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 0.5em;
 }
 
 .items.active {
-    display: flex;
+  display: flex;
 }
 
 .items img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
-    transition: transform 0.3s ease;
-}
-
-.items img:hover {
-    transform: scale(1.3);
+  width: 48px;
+  height: 48px;
 }
 
 /* Courses Section */
@@ -394,11 +406,14 @@ footer {
         padding: 3em 3em 5em;
     }
 
-    .skill {
-        max-width: 500px;
-        font-size: 1.3rem;
-        padding: 1.2em 10em;
+    .skills-wrapper {
+    flex-direction: column;
+    align-items: center;
     }
+
+  .skill {
+    width: 90%;
+    max-width: 300px;
 
     /* Animaciones base */
   .fade-in {
@@ -467,4 +482,5 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
 }

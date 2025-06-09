@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const skills = document.querySelectorAll('.skill');
+  const skills = document.querySelectorAll('.skill');
 
-    skills.forEach(skill => {
-        skill.addEventListener('click', () => {
-            const items = skill.querySelector('.items');
+  skills.forEach(skill => {
+    skill.addEventListener('click', () => {
+      const items = skill.querySelector('.items');
 
-            // Cierra todos los demás
-            document.querySelectorAll('.items').forEach(i => {
-                if (i !== items) i.classList.remove('active');
-            });
+      // Cierra todos los demás
+      document.querySelectorAll('.items').forEach(i => {
+        if (i !== items) i.classList.remove('active');
+      });
 
-            // Toggle del seleccionado
-            items.classList.toggle('active');
-        });
+      // Toggle del seleccionado
+      items.classList.toggle('active');
     });
+  });
 });
 
 // Activar animaciones de secciones
